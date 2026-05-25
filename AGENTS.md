@@ -1,5 +1,29 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# NextJS - Ecommerce
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+## Project Overview
+Modern ecommerce built with Next.js, TypeScript and Tailwind CSS.
+
+Main goals:
+- scalable architecture
+- reusable components
+- responsive design
+- clean codebase
+
+## Stack
+- NextJS 16
+- React
+- Typescript
+- Tailwind CSS V4
+- Shadcn
+- Zod
+- React-Hook-Forms
+- Prisma
+
+## Project Structure
+
+app/            -> routes and layouts
+components/     -> reusable UI components
+hooks/          -> custom hooks
+lib/            -> helper functions
+lib/constants/  -> constants
+types/          -> TypeScript types
