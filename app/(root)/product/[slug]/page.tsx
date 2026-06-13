@@ -1,9 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardAction } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import ProductPrice from "@/components/shared/product/product-price";
 import { getProductBySlug } from "@/lib/queries/product.queries";
 import { notFound } from "next/navigation";
+import ProductImages from "@/components/shared/product/product-images";
 
 const ProductDetailsPage = async (props: {
   params: Promise<{ slug: string }>;
@@ -15,7 +16,9 @@ const ProductDetailsPage = async (props: {
     <section>
       <div className="grid grid-cols-1 md:grid-cols-5">
         {/*Image column*/}
-        <div className="col-span-2"> {/* Images Component*/}</div>
+        <div className="col-span-2">
+          <ProductImages images={product.images} />
+        </div>
         {/*Details Column*/}
         <div className="col-span-2 p-5">
           <div className="flex flex-col gap-5">
@@ -26,7 +29,7 @@ const ProductDetailsPage = async (props: {
             <p>
               {product.rating} of {product.numReviews} Reviews
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <ProductPrice
                 value={Number(product.price)}
                 className="w-24 rounded-full bg-green-100 text-green-700 px-5 py-2"
