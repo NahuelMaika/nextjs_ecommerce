@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(openspec new *)",
+      "Bash(openspec status *)",
+      "Bash(openspec instructions *)",
+      "Bash(timeout 15 npm run dev)",
+      "Bash(node -e \"const t=require\\('./tsconfig.json'\\); console.log\\(JSON.stringify\\(t.compilerOptions.paths||'no paths'\\)\\)\")",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}
