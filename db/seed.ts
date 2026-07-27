@@ -8,6 +8,14 @@ async function main() {
   const prisma = new PrismaClient({ adapter });
 
   await prisma.product.deleteMany();
+  await prisma.user.deleteMany();
+  await prisma.account.deleteMany();
+  await prisma.session.deleteMany();
+  await prisma.verificationToken.deleteMany();
+
+  await prisma.user.createMany({
+    data: sampleData.users,
+  });
 
   await prisma.product.createMany({
     data: sampleData.products,
