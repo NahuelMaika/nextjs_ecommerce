@@ -45,3 +45,6 @@ next-env.d.ts
 
 /lib/generated/prisma
 .claude/settings.local.json
+
+# atl skill registry cache
+.atl/
